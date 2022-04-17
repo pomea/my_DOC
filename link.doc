@@ -1,2 +1,59 @@
 Bootstrap Example (table)
 https://examples.bootstrap-table.com/#options/buttons-toolbar.html#view-source
+
+
+//code
+
+
+
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="stylesheet"
+    href="https://unpkg.com/bootstrap-table@1.19.1/dist/themes/bootstrap-table/bootstrap-table.min.css">
+
+  <title>Hello, Bootstrap Table!</title>
+
+  <style>
+
+  </style>
+
+</head>
+
+<body>
+
+  <div class="container mt-2 mb-2">
+    <!-- slide table -->
+    <div style="overflow-x:auto;">
+      <table
+        id="table" 
+        data-toggle="table" 
+        data-pagination="true" 
+        data-search="true"
+        data-regex-search="true"
+        data-show-columns="true"
+        data-buttons-align="left"    
+        data-url="https://examples.wenzhixin.net.cn/examples/bootstrap_table/data">
+        <thead>
+          <tr>
+            <th data-field="id" data-sortable="true">ID</th>
+            <th data-field="name" data-sortable="true">Item Name</th>
+            <th data-field="price" data-sortable="true">Item Price</th>
+            
+          </tr>
+        </thead>
+      </table>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+  <script src="https://unpkg.com/bootstrap-table@1.19.1/dist/bootstrap-table.min.js"></script>
+  <script src="https://unpkg.com/bootstrap-table@1.19.1/dist/themes/bootstrap-table/bootstrap-table.min.js"></script>
+</body>
+
+</html>
