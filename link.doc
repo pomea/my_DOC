@@ -57,3 +57,156 @@ https://examples.bootstrap-table.com/#options/buttons-toolbar.html#view-source
 </body>
 
 </html>
+
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+table status css example
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    /*   color variables */
+/*   border radius */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Mukta, sans-serif;
+  height: 100vh;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  color: #4f546c;
+  font-size: 0.9rem;
+  background-color: #f9fbff;
+}
+
+table {
+  border-collapse: collapse;
+  box-shadow: 0 5px 10px #e1e5ee;
+  background-color: white;
+  text-align: left;
+  overflow: hidden;
+}
+table thead {
+  box-shadow: 0 5px 10px #e1e5ee;
+}
+table th {
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  font-size: 0.7rem;
+  font-weight: 900;
+}
+table td {
+  padding: 1rem 2rem;
+}
+table a {
+  text-decoration: none;
+  color: #2962ff;
+}
+table .status {
+  border-radius: 0.2rem;
+  background-color: red;
+  padding: 0.2rem 1rem;
+  text-align: center;
+}
+table .status-paid{
+  border-radius: 0.2rem;
+  background-color: rgb(255, 238, 0);
+  padding: 0.2rem 1rem;
+  text-align: center;
+}
+table .status-paiding{
+  border-radius: 0.2rem;
+  background-color: rgb(29, 254, 89);
+  padding: 0.2rem 1rem;
+  text-align: center;
+}
+table .status-unpaid{
+  border-radius: 0.2rem;
+  background-color: rgb(255, 0, 128);
+  padding: 0.2rem 1rem;
+  text-align: center;
+}
+  </style>
+</head>
+
+<body>
+  <table>
+    <thead>
+      <tr>
+        <th>Invoice</th>
+        <th>Company</th>
+        <th>Due Date</th>
+        <th>Status</th>
+        <th>Amount</th>
+      </tr>
+    </thead>
+    <tr>
+      <td><a href="#">INV__1001</a></td>
+      <td>Paragon</td>
+      <td>1/5/2021</td>
+      <td>
+        <p class="status status-unpaid">Unpaid</p>
+      </td>
+      <td class="amount">$520.18</td>
+    </tr>
+    <tr>
+      <td><a href="#">INV__1002</a></td>
+      <td>Sonic</td>
+      <td>1/4/2021</td>
+      <td>
+        <p class="status status-paid">Paid</p>
+      </td>
+      <td class="amount">$415.25</td>
+    </tr>
+    <tr>
+      <td><a href="#">INV__1003</a></td>
+      <td>Innocention</td>
+      <td>6/8/2021</td>
+      <td>
+        <p class="status status-paiding">Paiding</p>
+      </td>
+      <td class="amount">$258.18</td>
+    </tr>
+    <tr>
+      <td><a href="#">INV__1004</a></td>
+      <td>Paragon</td>
+      <td>1/5/2021</td>
+      <td>
+        <p class="status status-paiding">Paiding</p>
+      </td>
+      <td class="amount">$520.18</td>
+    </tr>
+    <tr>
+      <td><a href="#">INV__1005</a></td>
+      <td>Paragon</td>
+      <td>1/5/2021</td>
+      <td>
+        <p class="status status-paid">Paid</p>
+      </td>
+      <td class="amount">$520.18</td>
+    </tr>
+    <tbody>
+
+    </tbody>
+  </table>
+
+</body>
+
+</html>
