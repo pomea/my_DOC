@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            height: 297mm;
+            width: 210mm;
+            /* to centre page on screen*/
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0%;
+            margin: 0;
+
+        }
+
+        form {
+            border: 1px solid #000000;
+            border-collapse: collapse;
+        }
+
+        p {
+            font-size: 12px;
+            padding: 2px;
+        }
+
+        /* check box - font size */
+        .cb-fs {
+            font-size: 12px;
+        }
+
+        .input-line {
+            border: none;
+            border-bottom: 1px dotted #000000;
+            border-collapse: collapse;
+            margin-bottom: 10px;
+        }
+
+        .h-1 {
+            border: 1px solid #000000;
+            border-collapse: collapse;
+            padding: 5px;
+        }
+
+        .border-hid {
+            border: none;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid black;
+
+        }
+
+        label {
+            font-size: medium;
+            margin-right: 5px;
+        }
+
+        .small-font {
+            font-size: 14px;
+        }
+
+        .cc {
+            margin-right: 22px;
+        }
+
+        .refer {
+            margin-right: 43px;
+        }
+
+        .issued {
+            margin-right: 25px;
+        }
+
+        /*custom column */
+
+        .col-main {
+            float: left;
+            text-align: center;
+        }
+
+        .col-a {
+            width: 5%;
+            float: left;
+            border: none;
+
+        }
+
+        .col-b {
+            width: 95%;
+            float: left;
+            border: none;
+        }
+
+        .col-c {
+            float: left;
+            height: 27px;
+            text-align: center;
+        }
+
+        .col-d {
+            float: left;
+            height: 270px;
+            text-align: center;
+        }
+
+        .col-aside {
+            float: left;
+            height: 300px;
+            width: 90%;
+            text-align: center;
+
+        }
+        
+
+        .bd {
+            border: 1px solid #000000;
+            border-bottom: none;
+            border-collapse: collapse;
+        }
+
+        .row-c:after {
+            content: "";
+            padding: 0px;
+            display: table;
+            clear: both;
+        }
+
+        input[type="text"]::placeholder {
+
+            /* Firefox, Chrome, Opera */
+            text-align: right;
+            margin-top: 0px;
+        }
+
+        .aside {}
+    </style>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+
+</head>
+
+<body>
+
+
+    <div class="container-fuild">
+
+        <div class="row">
+            <div class="col ">
+                <div class="row mb-2">
+                    <div class="col-12 text-center mb-2">
+                        <h4>Parts Trouble Information</h4>
+                    </div>
+                </div>
+                <div class="row mb-2">
+                    <div class="col-7">
+
+                        <div class="row">
+                            <div class="col-12">
+                                <label for="attn">ATTN</label>
+                                <span>:</span>
+                                <input class="col-10 input-line" type="text" name="attn" />
+                            </div>
+                            <div class="col-12">
+                                <label for="from">FROM</label>
+                                <span>:</span>
+                                <input class="col-10 input-line" type="text" name="from" />
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="col-5">
+                        <div class="row">
+                            <div class="col-12 mb-2">
+                                <label class="refer" for="refer_no">REFER NO. :</label>
+                                <span></span>
+                                <input class="border-hid" type="text" type="text" name="refer_no" />
+                            </div>
+                            <div class="col-12">
+                                <label class="issued" for="issued">ISSUED DATE :</label>
+                                <span></span>
+                                <input class="border-hid" type="text" type="text" name="issued" />
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                    <div class="col-9">
+                        <label class="cc" for="from">CC</label>
+                        <span>:</span>
+                        <input class="col-7 input-line" type="text" name="from" />
+                        <span style="margin-left:15px;"></span>
+                        <label style="font-family: 'Brush Script MT', cursive; font-style: oblique">Trouble</label>
+                        <input type="checkbox" name="Checkboxes2" style="margin-left:5px;" />
+                        <span class="small-font">Local</span>
+
+                    </div>
+                    <div class="col-3">
+                        <div class="form-group checkbox-inline row">
+                            <div class="col mt-1">
+                                <label class="checkbox">
+                                    <input type="checkbox" name="Checkboxes2" />
+                                    <span class="small-font">W/H</span>
+                                </label>
+                                <span style="margin-left:10px;"></span>
+                                <label class="checkbox">
+                                    <input type="checkbox" name="Checkboxes2" />
+                                    <span class="small-font">Rec.</span>
+                                </label>
+                                <span style="margin-left:10px;"></span>
+                                <label class="checkbox">
+                                    <input type="checkbox" name="Checkboxes2" />
+                                    <span class="small-font">MSCST</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-main bg-danger p-0" style="width: 13.5%;">
+                        <div class="row">
+                            <div class="col-aside bg-white">
+                                a
+                            </div>
+         
+                                
+
+
+                        </div>
+                    </div>
+                    <div class="col-main bg-danger p-xl-0" style="width: 1.5%;">
+        
+                    </div>
+                    <div class="col-main p-0" style="width: 85%;">
+                        <div class="row-c">
+                            <div class="col-a bg-primary">
+                                <div class="col-d" style="width: 100%;">
+                                    <h5 class="aside">Requestor</h5>
+                                </div>
+                                <div class="col-d bd" style="width: 100%; height: 27px;">
+                                    <p>W/H</p>
+                                </div>
+                                <div class="col-d bd"
+                                    style="width: 100%; height: 16px; border-bottom: 1px solid black;">
+
+                                </div>
+
+                                <div class="col-d" style="width: 100%; height: 324px;">
+                                    <h5 class="aside">PE, OS,QA,PDE Section</h5>
+                                </div>
+                                <div class="col-d bd" style="width: 100%; height: 27px;">
+                                    <p>W/H</p>
+                                </div>
+                            </div>
+
+                            <div class="col-b bg-warning">
+
+                                <!-- row 1 -->
+                                <div class="col-c " style="width: 40%;">
+                                    <div class="col-c  bd" style="width: 35%;">
+                                        <p>PART NO</p>
+                                    </div>
+                                    <div class="col-c  bd" style="width: 65%;">
+                                        <p>PART NAME</p>
+                                    </div>
+                                </div>
+                                <div class="col-c " style="width: 60%;">
+                                    <div class="col-c  bd" style="width: 22%;">
+                                        <p>P/ O , S/O NO.</p>
+                                    </div>
+                                    <div class="col-c  bd" style="width: 34%;">
+                                        <p>INVOICE NO</p>
+                                    </div>
+                                    <div class="col-c  bd" style="width: 22%;">
+                                        <p> REC.DATE</p>
+                                    </div>
+                                    <div class="col-c bd" style="width: 22%;">
+                                        <p>UNLOAD DATE</p>
+                                    </div>
+                                </div>
+                                <!-- row2 -->
+                                <div class="col-c " style="width: 40%;">
+                                    <div class="col-c bd" style="width: 35%;">
+
+                                    </div>
+                                    <div class="col-c bd" style="width: 65%;">
+
+                                    </div>
+                                </div>
+                                <div class="col-c" style="width: 60%;">
+                                    <div class="col-c bd " style="width: 22%;">
+
+                                    </div>
+                                    <div class="col-c bd " style="width: 34%;">
+
+                                    </div>
+                                    <div class="col-c bd" style="width: 22%;">
+
+                                    </div>
+                                    <div class="col-c bd " style="width: 22%;">
+
+                                    </div>
+                                </div>
+
+                                <!-- row3 -->
+                                <div class="col-c " style="width: 40%;">
+                                    <div class="col-c bd" style="width: 25%;">
+                                        <p>QTY(Pcs)</p>
+                                    </div>
+                                    <div class="col-c bd" style="width: 75%;">
+                                        <p>VENDOR NAME</p>
+                                    </div>
+                                </div>
+                                <div class="col-c" style="width: 60%;">
+                                    <div class="col-c" style="width: 22%;border-top: 1px solid black;">
+
+                                    </div>
+                                    <div class="col-c " style="width: 34%;border-top: 1px solid black;">
+                                        <label class="checkbox">
+                                            <input type="checkbox" name="Checkboxes2" style="margin-left: 30px;" />
+                                            <span class="cb-fs">Import</span>
+                                        </label>
+                                        <label class="checkbox">
+                                            <input type="checkbox" name="Checkboxes2" />
+                                            <span class="cb-fs">Local</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-c " style="width: 22%;border-top: 1px solid black;">
+                                        <label class="checkbox">
+                                            <input type="checkbox" name="Checkboxes2" style="margin-left: 15px;" />
+                                            <span class="cb-fs">BOI</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-c  "
+                                        style="width: 22%;text-align: left;border-top: 1px solid black;">
+                                        <label class="checkbox">
+                                            <input type="checkbox" name="Checkboxes2" style="margin-left: 15px;" />
+                                            <span class="cb-fs">EEI</span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <!-- row4 -->
+                                <div class="col-c " style="width: 40%;">
+                                    <div class="col-c bd" style="width: 25%;">
+                                        <p></p>
+                                    </div>
+                                    <div class="col-c bd" style="width: 75%;">
+                                        <p></p>
+                                    </div>
+                                </div>
+                                <div class="col-c" style="width: 60%;">
+                                    <div class="col-c" style="width: 22%;border-top: 1px solid black;">
+
+                                    </div>
+                                    <div class="col-c " style="width: 34%;border-top: 1px solid black;">
+                                        <label class="checkbox">
+                                            <input type="checkbox" name="Checkboxes2" />
+                                            <span class="cb-fs">AIR</span>
+                                        </label>
+
+                                    </div>
+                                    <div class="col-c "
+                                        style="width: 22%;border-top: 1px solid black; text-align: left;">
+                                        <label class="checkbox">
+                                            <input type="checkbox" name="Checkboxes2" style="margin-left: 28px;" />
+                                            <span class="cb-fs">SEA</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-c  "
+                                        style="width: 22%; text-align: left; border-top: 1px solid black;">
+                                        <label class="checkbox">
+                                            <input type="checkbox" name="Checkboxes2" style="margin-left: 15px;" />
+                                            <span class="cb-fs">TRUCK</span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <!-- row5 -->
+                                <div class="col-c " style="width: 40%;">
+                                    <div class="col-c bd" style="width: 40%; border-right: none;">
+                                        <p>UNDER RESPONSE BY</p>
+                                    </div>
+                                    <div class="col-c bd" style="width: 60%; border-left: none; border-right: none;">
+                                        <label class="checkbox">
+                                            <input type="checkbox" name="Checkboxes2" />
+                                            <span class="cb-fs">MSCST</span>
+                                        </label>
+                                        <label class="checkbox">
+                                            <input type="checkbox" name="Checkboxes2" />
+                                            <span class="cb-fs">VENDOR</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-c" style="width: 60%;">
+                                    <div class="col-c bd" style="width: 22%; border-left: none;">
+                                        <label class="checkbox">
+                                            <input type="checkbox" name="Checkboxes2" />
+                                            <span class="cb-fs">STT</span>
+                                        </label>
+                                        <label class="checkbox">
+                                            <input type="checkbox" name="Checkboxes2" />
+                                            <span class="cb-fs">Other</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-c " style="width: 34%;border-top: 1px solid black;">
+                                        <p>PACKING CONDITION</p>
+
+                                    </div>
+                                    <div class="col-c " style="width: 22%;border-top: 1px solid black;">
+                                        <label class="checkbox">
+                                            <input type="checkbox" name="Checkboxes2" style="margin-left: 50px;" />
+                                            <span class="cb-fs">Good</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-c  "
+                                        style="width: 22%; text-align: left; border-top: 1px solid black;">
+                                        <label class="checkbox">
+                                            <input type="checkbox" name="Checkboxes2" style="margin-left: 5px;" />
+                                            <span class="cb-fs">No Good</span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <!-- row 6 7-->
+
+                                <div class="col-c " style="width: 100%;">
+                                    <div class="col-c bd" style="width: 100%; text-align: left;">
+                                        <p>Trouble Information :</p>
+                                    </div>
+                                </div>
+                                <div class="col-c " style="width: 100%;">
+                                    <div class="col-c bd" style="width: 100%; text-align: left;">
+
+                                    </div>
+                                </div>
+
+                                <!-- row 8 9 10 -->
+                                <div class="col-c " style="width: 40%;">
+                                    <div class="col-c"
+                                        style="width: 100%; text-align: left; border-top: 1px solid black;">
+                                        <p>Type:</p>
+                                    </div>
+                                </div>
+                                <div class="col-c " style="width: 60%;">
+                                    <div class="col-c "
+                                        style="width: 56%; text-align: left; border-top: 1px solid black; border-right: 1px solid black">
+                                    </div>
+                                    <div class="col-c bd" style="width: 22%; text-align: left; border-bottom: none;">
+                                    </div>
+                                    <div class="col-c bd" style="width: 22%; text-align: left; border-bottom: none;">
+                                    </div>
+                                </div>
+
+                                <div class="col-c " style="width: 40%;">
+                                    <div class="col-c"
+                                        style="width: 100%; text-align: left; border-top: 1px solid black;">
+
+                                    </div>
+                                </div>
+                                <div class="col-c " style="width: 60%;">
+                                    <div class="col-c "
+                                        style="width: 56%; text-align: left; border-top: 1px solid black; border-right: 1px solid black;">
+                                    </div>
+                                    <div class="col-c bd"
+                                        style="width: 22%; text-align: left; border-bottom: none; border-top: none;">
+                                    </div>
+                                    <div class="col-c bd"
+                                        style="width: 22%; text-align: left; border-bottom: none; border-top: none;">
+                                    </div>
+                                </div>
+
+                                <div class="col-c " style="width: 65%;">
+                                    <div class="col-c bd"
+                                        style="width: 100%; border-top: 1px solid black; border-right: none;">
+                                        <p>( Unit price ............ bht = ............ = .................. bht. )</p>
+                                    </div>
+                                </div>
+                                <div class="col-c " style="width: 35%;">
+                                    <div class="col-c bd" style="width: 24.6%; text-align: left; border-left: none; ">
+                                    </div>
+                                    <div class="col-c bd"
+                                        style="width: 37.7%; text-align: left; border-bottom: none; border-top: none;">
+                                    </div>
+                                    <div class="col-c bd"
+                                        style="width: 37.7%; text-align: left; border-bottom: none; border-top: none;">
+                                    </div>
+                                </div>
+
+
+
+                                <!-- row 11 -->
+                                <div class="col-c " style="width: 40%;">
+                                    <div class="col-c " style="width: 25%; border-top: 1px solid black;">
+                                        <p>ISSUE Q'TY :</p>
+                                    </div>
+                                    <div class="col-c " style="width: 50%; border-top: 1px solid black;">
+                                        <p>Pcs, 1 Box =</p>
+                                    </div>
+                                    <div class="col-c "
+                                        style="width: 25%; text-align: end; border-top: 1px solid black;">
+                                        <p style=" margin-right: 10px;">Pcs. </p>
+                                    </div>
+                                </div>
+                                <div class="col-c " style="width: 60%;">
+                                    <div class="col-c  bd" style="width: 22%; text-align: left; border-right: none;">
+                                        <p>PIC/WH</p>
+                                    </div>
+                                    <div class="col-c  bd" style="width: 34%; border-left: none;">
+                                    </div>
+                                    <div class="col-c  bd" style="width: 22%;  border-bottom: 1px solid black;">
+                                        <p>Issued/check</p>
+                                    </div>
+                                    <div class="col-c bd" style="width: 22%;  border-bottom: 1px solid black;">
+                                        <p>Approved</p>
+                                    </div>
+                                </div>
+
+                                <div class="col-c bd" style="width: 100%; height: 15px;"></div>
+
+                                <!-- PE, OS,QA,PDE Section -->
+                                <!-- row1 2 3 4 -->
+                                <div class="col-c " style="width: 100%;">
+                                    <div class="col-c bd" style="width: 100%; text-align: left;">
+                                        <p>Re-Inspection Procedure :</p>
+                                    </div>
+                                </div>
+                                <div class="col-c " style="width: 100%;">
+                                    <div class="col-c bd" style="width: 100%; text-align: left;">
+
+                                    </div>
+                                </div>
+                                <div class="col-c " style="width: 100%;">
+                                    <div class="col-c bd" style="width: 100%; text-align: left;">
+
+                                    </div>
+                                </div>
+                                <div class="col-c " style="width: 100%;">
+                                    <div class="col-c bd" style="width: 100%; text-align: left;">
+
+                                    </div>
+                                </div>
+
+                                <!-- row 5 6 7 8 -->
+                                <div class="col-c " style="width: 40%;">
+                                    <div class="col-c"
+                                        style="width: 100%; text-align: left; border-top: 1px solid black;">
+                                        <p>Conclusion :</p>
+                                    </div>
+                                </div>
+                                <div class="col-c " style="width: 60%;">
+                                    <div class="col-c "
+                                        style="width: 56%; text-align: left; border-top: 1px solid black; border-right: 1px solid black">
+                                    </div>
+                                    <div class="col-c bd" style="width: 22%; text-align: left; border-bottom: none;">
+                                    </div>
+                                    <div class="col-c bd" style="width: 22%; text-align: left; border-bottom: none;">
+                                    </div>
+                                </div>
+
+                                <div class="col-c " style="width: 40%;">
+                                    <div class="col-c"
+                                        style="width: 100%; text-align: left; border-top: 1px solid black;">
+
+                                    </div>
+                                </div>
+                                <div class="col-c " style="width: 60%;">
+                                    <div class="col-c "
+                                        style="width: 56%; text-align: left; border-top: 1px solid black; border-right: 1px solid black;">
+                                    </div>
+                                    <div class="col-c bd"
+                                        style="width: 22%; text-align: left; border-bottom: none; border-top: none;">
+                                    </div>
+                                    <div class="col-c bd"
+                                        style="width: 22%; text-align: left; border-bottom: none; border-top: none;">
+                                    </div>
+                                </div>
+
+                                <div class="col-c " style="width: 40%;">
+                                    <div class="col-c"
+                                        style="width: 100%; text-align: left; border-top: 1px solid black;">
+
+                                    </div>
+                                </div>
+                                <div class="col-c " style="width: 60%;">
+                                    <div class="col-c "
+                                        style="width: 56%; text-align: left; border-top: 1px solid black; border-right: 1px solid black;">
+                                    </div>
+                                    <div class="col-c bd"
+                                        style="width: 22%; text-align: left; border-bottom: none; border-top: none;">
+                                    </div>
+                                    <div class="col-c bd"
+                                        style="width: 22%; text-align: left; border-bottom: none; border-top: none;">
+                                    </div>
+                                </div>
+
+
+                                <div class="col-c " style="width: 40%;">
+                                    <div class="col-c " style="width: 100%; border-top: 1px solid black;">
+                                        <p></p>
+                                    </div>
+
+                                </div>
+                                <div class="col-c " style="width: 60%;">
+                                    <div class="col-c "
+                                        style="width: 22%; text-align: left; border-top: 1px solid black;">
+                                        <p></p>
+                                    </div>
+                                    <div class="col-c  bd" style="width: 34%; border-left: none;">
+                                    </div>
+                                    <div class="col-c  bd" style="width: 22%;  border-bottom: 1px solid black;">
+                                        <p>Issued/check</p>
+                                    </div>
+                                    <div class="col-c bd" style="width: 22%;  border-bottom: 1px solid black;">
+                                        <p>Approved</p>
+                                    </div>
+                                </div>
+
+                                <!-- row 9 -->
+
+                                <div class="col-c " style="width: 53%;">
+                                    <div class="col-c bd" style="width: 55%; text-align: left;">
+                                        <p>RE-INSPECTION / SORTING RESULT</p>
+                                    </div>
+                                    <div class="col-c bd" style="width: 45%;text-align: left;">
+                                        <p>Q'ty :</p>
+                                    </div>
+                                </div>
+                                <div class="col-c " style="width: 47%;">
+                                    <div class="col-c bd" style="width: 43.8%; text-align: left;">
+                                        <p>GOOD :</p>
+                                    </div>
+                                    <div class="col-c bd" style="width: 56.2%; text-align: left;">
+                                        <p>NG :</p>
+                                    </div>
+                                </div>
+
+                                <!-- row 10 -->
+
+                                <div class="col-c " style="width: 50%;">
+                                    <div class="col-c bd" style="width: 55%;">
+                                        <p>STT-Standard labor Cost</p>
+                                    </div>
+                                    <div class="col-c bd" style="width: 45%; text-align: left;">
+                                        <p>Man Power X Hours.</p>
+                                    </div>
+                                </div>
+                                <div class="col-c " style="width: 50%;">
+                                    <div class="col-c bd" style="width: 13%;">
+                                        <p>TTL Amt.</p>
+                                    </div>
+                                    <div class="col-c bd" style="width: 34.2%;">
+                                        <p>Mat'l Cost</p>
+                                    </div>
+                                    <div class="col-c bd" style="width: 52.8%;">
+                                        <p>Total Charge (Baht)</p>
+                                    </div>
+                                </div>
+
+                                <!-- row 10 11 -->
+
+                                <div class="col-c " style="width: 40%;">
+                                    <div class="col-c bd" style="width: 25%; text-align: left;">
+                                        <label class="checkbox">
+                                            <input type="checkbox" name="Checkboxes2" style="margin-left: 10px;" />
+                                            <span class="cb-fs">Normal:</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-c bd" style="width: 75%;">
+                                        <input type="text" style="height: 20px; width: 50px;">
+                                        <input type="text" style="height: 20px; width: 50px;">
+                                        <span class="small-font">X</span>
+                                        <input type="text" placeholder="+" style="height: 20px; width: 100px;">
+
+
+                                    </div>
+                                </div>
+                                <div class="col-c" style="width: 60%;">
+                                    <div class="col-c" style="width: 22%;border-top: 1px solid black;">
+
+                                    </div>
+                                    <div class="col-c " style="width: 34%;border-top: 1px solid black;">
+                                        <label class="checkbox">
+                                            <input type="checkbox" name="Checkboxes2" style="margin-left: 30px;" />
+                                            <span class="cb-fs">Import</span>
+                                        </label>
+                                        <label class="checkbox">
+                                            <input type="checkbox" name="Checkboxes2" />
+                                            <span class="cb-fs">Local</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-c " style="width: 22%;border-top: 1px solid black;">
+                                        <label class="checkbox">
+                                            <input type="checkbox" name="Checkboxes2" style="margin-left: 15px;" />
+                                            <span class="cb-fs">BOI</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-c  "
+                                        style="width: 22%;text-align: left;border-top: 1px solid black;">
+                                        <label class="checkbox">
+                                            <input type="checkbox" name="Checkboxes2" style="margin-left: 15px;" />
+                                            <span class="cb-fs">EEI</span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="col-c " style="width: 40%;">
+                                    <div class="col-c bd" style="width: 25%; text-align: left;">
+                                        <input type="checkbox" name="Checkboxes2" style="margin-left: 10px;" />
+                                        <span class="cb-fs">OT:</span>
+
+                                    </div>
+                                    <div class="col-c bd" style="width: 75%;">
+                                        <p>VENDOR NAME</p>
+                                    </div>
+                                </div>
+                                <div class="col-c" style="width: 60%;">
+                                    <div class="col-c" style="width: 22%;border-top: 1px solid black;">
+
+                                    </div>
+                                    <div class="col-c " style="width: 34%;border-top: 1px solid black;">
+                                        <label class="checkbox">
+                                            <input type="checkbox" name="Checkboxes2" style="margin-left: 30px;" />
+                                            <span class="cb-fs">Import</span>
+                                        </label>
+                                        <label class="checkbox">
+                                            <input type="checkbox" name="Checkboxes2" />
+                                            <span class="cb-fs">Local</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-c " style="width: 22%;border-top: 1px solid black;">
+                                        <label class="checkbox">
+                                            <input type="checkbox" name="Checkboxes2" style="margin-left: 15px;" />
+                                            <span class="cb-fs">BOI</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-c  "
+                                        style="width: 22%;text-align: left;border-top: 1px solid black;">
+                                        <label class="checkbox">
+                                            <input type="checkbox" name="Checkboxes2" style="margin-left: 15px;" />
+                                            <span class="cb-fs">EEI</span>
+                                        </label>
+                                    </div>
+                                </div>
+
+
+                                <!-- row 12 -->
+
+                                <div class="col-c " style="width: 60%;">
+                                    <div class="col-c bd" style="width: 45.8%; text-align: left;">
+                                        <p>Return Q'ty </p>
+                                    </div>
+                                    <div class="col-c bd" style="width: 10.2%; text-align: left;">
+                                        <p>PCS</p>
+                                    </div>
+                                    <div class="col-c bd" style="width: 44%; text-align: left;">
+                                        <p>PIC/WH</p>
+                                    </div>
+
+                                </div>
+                                <div class="col-c " style="width: 40%;">
+                                    <div class="col-c bd" style="width: 100%;">
+                                        <p>Defect Disposition</p>
+                                    </div>
+
+                                </div>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
