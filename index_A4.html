@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            height: 297mm;
+            width: 210mm;
+            /* to centre page on screen*/
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0%;
+            margin: 0%;
+        }
+
+        .sec-0 {
+            width: 210mm;
+            height: 40px;
+            text-align: center;
+            background-color: rgb(52, 113, 255);
+            border: 1px solid black;
+            border-bottom: none;
+        }
+
+        .sec-1 {
+            width: 210mm;
+            height: 100px;
+            background-color: red;
+            border: 1px solid black;
+            border-bottom: none;
+        }
+
+        .sec-2 {
+            width: 210mm;
+            height: 100px;
+            background-color: yellow;
+            border: 1px solid black;
+            border-bottom: none;
+        }
+
+        .sec-3 {
+            width: 210mm;
+            height: 100px;
+            background-color: greenyellow;
+            border: 1px solid black;
+        }
+
+        .col-a {
+            width: 15%;
+            float: left;
+            border: none;
+            background-color: aqua;
+
+        }
+
+        .col-b {
+            width: 85%;
+            float: left;
+            border: none;
+            background-color: aquamarine;
+        }
+
+        .col-n {
+            float: left;
+            border: none;
+            height: 27px;
+        }
+
+        .input-line {
+            border: none;
+            border-bottom: 2px dotted #000000;
+            border-collapse: collapse;
+            margin-bottom: 10px;
+        }
+        .bd-hidden {
+            border: none;
+        }
+
+        /* Custom font setting */
+        .head-font {
+            font-size: 22px;
+            padding-top: 6px;
+            margin: 0%;
+            font-weight: bold;
+        }
+        
+        label{
+            font-size: 12px;   
+        }
+
+        .bd{
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="sec-0">
+        <p class="head-font">Parts Trouble Information</p>
+    </div>
+
+    <div class="sec-1">
+
+        <div class="col-a" style="width: 10%;">
+            s1-1
+        </div>
+        <div class="col-b" style="width: 90%;">
+            <div class="row">
+                <div class="col-n" style="width: 65%;">
+                    <label for="attn">ATTN</label>
+                    <span>:</span>
+                    <input class="input-line" type="text" name="attn" size="48" />
+                </div>
+                <div class="col-n " style="width: 35%; background-color:">
+                    <label class="bd" for="refer_no">REFER NO.:</label>
+                    <span></span>
+                    <input class="bd-hidden" type="text" name="refer_no" size="19px" />
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-n " style="width: 65%;">
+                    <label for="from">FROM</label>
+                    <span>:</span>
+                    <input class="input-line" type="text" name="attn" size="47" />
+                </div>
+                <div class="col-n " style="width: 35%;">
+                    <label class="bd" for="refer_no">ISSUED DATE:</label>
+                    <span></span>
+                    <input class="bd-hidden" type="text" name="refer_no" size="17px" />
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-n " style="width: 52%;">
+                    <label for="from" style="margin-right: 15px;">CC</label>
+                    <span>:</span>
+                    <input class="input-line" type="text" name="attn" size="40px" />
+                </div>
+                <div class="col-n " style="width: 48%;">
+                    b
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="sec-2">
+        <div class="col-a">
+            b-1
+        </div>
+        <div class="col-b">
+            b-2
+        </div>
+    </div>
+    <div class="sec-3">
+        c
+    </div>
+</body>
+
+</html>
