@@ -18,32 +18,78 @@
             margin: 0%;
         }
 
+        /* font size */
+        .sm-t {
+            padding: 0%;
+            margin: 0%;
+            font-size: 12px;
+        }
+
+        .ssm-t {
+            padding: 0;
+            margin: 0%;
+            font-size: 10px;
+            font-weight: bold;
+        }
+
+        .ssm-f {
+            padding: 0;
+            margin: 0%;
+            font-size: 10px;
+            font-weight: bold;
+        }
+
+        .ssm-b {
+            padding-top: 0%;
+            margin: 0%;
+            font-size: 9px;
+            font-weight: bold;
+        }
+
+        .ssm-t2 {
+            padding-top: 2px;
+            margin: 0%;
+            font-size: 11px;
+            font-weight: bold;
+        }
+
+        .mt-5 {
+            margin-top: 5px;
+        }
+
+        .mt-10 {
+            margin-top: 10px;
+        }
+
+        /* column size */
         .sec-0 {
             width: 210mm;
             height: 40px;
             text-align: center;
-            background-color: rgb(52, 113, 255);
+            /* background-color: rgb(52, 113, 255); */
             border: 1px solid black;
             border-bottom: none;
         }
 
         .sec-1 {
             width: 210mm;
-            height: 100px;
-            background-color: red;
+            height: 80px;
+            /* background-color: red; */
             border: 1px solid black;
             border-bottom: none;
         }
 
         .sec-2 {
+            box-sizing: border-box;
             width: 210mm;
-            height: 100px;
+            height: 500px;
             background-color: yellow;
             border: 1px solid black;
             border-bottom: none;
         }
 
         .sec-3 {
+
             width: 210mm;
             height: 100px;
             background-color: greenyellow;
@@ -51,7 +97,7 @@
         }
 
         .col-a {
-            width: 15%;
+            width: 12%;
             float: left;
             border: none;
             background-color: aqua;
@@ -59,10 +105,32 @@
         }
 
         .col-b {
-            width: 85%;
+            width: 88%;
             float: left;
             border: none;
-            background-color: aquamarine;
+        }
+
+
+        .col-a2 {
+            width: 5%;
+            float: left;
+            border: none;
+            background-color: blue;
+
+        }
+
+        .col-b2 {
+            width: 95%;
+            float: left;
+            border: none;
+            background-color: red;
+        }
+
+        .col-c {
+            box-sizing: border-box;
+            float: left;
+            height: 22px;
+            text-align: center;
         }
 
         .col-n {
@@ -77,6 +145,7 @@
             border-collapse: collapse;
             margin-bottom: 10px;
         }
+
         .bd-hidden {
             border: none;
         }
@@ -88,13 +157,45 @@
             margin: 0%;
             font-weight: bold;
         }
-        
-        label{
-            font-size: 12px;   
+
+        label {
+            font-size: 12px;
         }
 
-        .bd{
+        .bd {
             font-weight: bold;
+        }
+
+        .row-c:after {
+            content: "";
+            padding: 0px;
+            display: table;
+            clear: both;
+        }
+
+        .bl {
+            border: 1px solid #000000;
+            /* border-bottom: none; */
+            border-top: none;
+            border-right: none;
+        }
+
+        .bt_{
+            border-top: 1px solid #000000;
+        }
+        .br_{
+            border-right: 1px solid #000000;
+        }
+
+        .bl_{
+            border-left: 1px solid #000000;
+        }
+        .bb_{
+            border-bottom: 1px solid #000000;
+        }
+
+        [type="checkbox"] {
+            vertical-align: middle;
         }
     </style>
 </head>
@@ -106,44 +207,64 @@
 
     <div class="sec-1">
 
-        <div class="col-a" style="width: 10%;">
-            s1-1
-        </div>
+        <div class="col-a" style="width: 10%; background-color: white;">&nbsp;</div>
         <div class="col-b" style="width: 90%;">
             <div class="row">
-                <div class="col-n" style="width: 65%;">
+                <div class="col-n" style="width: 67%;">
                     <label for="attn">ATTN</label>
                     <span>:</span>
-                    <input class="input-line" type="text" name="attn" size="48" />
+                    <input class="input-line" type="text" name="attn" size="49" />
                 </div>
-                <div class="col-n " style="width: 35%; background-color:">
+                <div class="col-n " style="width: 33%;">
                     <label class="bd" for="refer_no">REFER NO.:</label>
-                    <span></span>
-                    <input class="bd-hidden" type="text" name="refer_no" size="19px" />
-
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-n " style="width: 65%;">
-                    <label for="from">FROM</label>
-                    <span>:</span>
-                    <input class="input-line" type="text" name="attn" size="47" />
-                </div>
-                <div class="col-n " style="width: 35%;">
-                    <label class="bd" for="refer_no">ISSUED DATE:</label>
                     <span></span>
                     <input class="bd-hidden" type="text" name="refer_no" size="17px" />
 
                 </div>
             </div>
             <div class="row">
-                <div class="col-n " style="width: 52%;">
+                <div class="col-n " style="width: 67%;">
+                    <label for="from">FROM</label>
+                    <span>:</span>
+                    <input class="input-line" type="text" name="attn" size="48" />
+                </div>
+                <div class="col-n " style="width: 33%;">
+                    <label class="bd" for="refer_no">ISSUED DATE :</label>
+                    <span></span>
+                    <input class="bd-hidden" type="text" name="refer_no" size="15px" />
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-n " style="width: 54%;">
                     <label for="from" style="margin-right: 15px;">CC</label>
                     <span>:</span>
-                    <input class="input-line" type="text" name="attn" size="40px" />
+                    <input class="input-line" type="text" name="attn" size="43px" />
                 </div>
-                <div class="col-n " style="width: 48%;">
-                    b
+                <div class="col-n " style="width: 21%;">
+                    <label ref="local" class="sm-t">Trouble area</label>
+                    <input type="checkbox" name="local" style="margin-left:5px;" />
+                    <span class="ssm-t">Local</span>
+                </div>
+                <div class="col-n" style="width: 25%;">
+                    <div class="form-group checkbox-inline row">
+                        <div class="col mt-1">
+                            <label class="checkbox">
+                                <input type="checkbox" name="W/H" />
+                                <span class="ssm-t">W/H</span>
+                            </label>
+                            <span></span>
+                            <label class="checkbox">
+                                <input type="checkbox" name="Rec" />
+                                <span class="ssm-t">Rec.</span>
+                            </label>
+                            <span></span>
+                            <label class="checkbox">
+                                <input type="checkbox" name="MSCST" />
+                                <span class="ssm-t">MSCST</span>
+                            </label>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -155,7 +276,262 @@
             b-1
         </div>
         <div class="col-b">
-            b-2
+            <div class="row-c">
+                <div class="col-a2">
+                    a2
+                </div>
+                <div class="col-b2">
+                    <!-- row 1 -->
+                    <div class="col-c " style="width: 40%;">
+                        <div class="col-c bl" style="width: 35%;">
+                            <p class="ssm-f mt-5">PART NO</p>
+                        </div>
+                        <div class="col-c  bl" style="width: 65%;">
+                            <p class="ssm-f mt-5">PART NAME</p>
+                        </div>
+                    </div>
+                    <div class="col-c " style="width: 60%;">
+                        <div class="col-c  bl" style="width: 22%;">
+                            <p class="ssm-f mt-5">P/ O , S/O NO.</p>
+                        </div>
+                        <div class="col-c  bl" style="width: 34%;">
+                            <p class="ssm-f mt-5">INVOICE NO</p>
+                        </div>
+                        <div class="col-c  bl" style="width: 22%;">
+                            <p class="ssm-f mt-5"> REC.DATE</p>
+                        </div>
+                        <div class="col-c bl" style="width: 22%;">
+                            <p class="ssm-f mt-5">UNLOAD DATE</p>
+                        </div>
+                    </div>
+
+                    <!-- row 2 -->
+                    <div class="col-c " style="width: 40%;">
+                        <div class="col-c bl" style="width: 35%;"></div>
+                        <div class="col-c  bl" style="width: 65%;"></div>
+                    </div>
+                    <div class="col-c " style="width: 60%;">
+                        <div class="col-c  bl" style="width: 22%;"></div>
+                        <div class="col-c  bl" style="width: 34%;"></div>
+                        <div class="col-c  bl" style="width: 22%;"></div>
+                        <div class="col-c bl" style="width: 22%;"></div>
+                    </div>
+
+                    <!-- row3 -->
+                    <div class="col-c " style="width: 40%;">
+                        <div class="col-c bl" style="width: 25%;">
+                            <p class="ssm-f mt-5">QTY(Pcs)</p>
+                        </div>
+                        <div class="col-c bl" style="width: 75%;">
+                            <p class="ssm-f mt-5">VENDOR NAME</p>
+                        </div>
+                    </div>
+                    <div class="col-c bl" style="width: 60%;">
+                        <div class="col-c" style="width: 22%;">
+
+                        </div>
+                        <div class="col-c " style="width: 34%;">
+                            <label class="checkbox">
+                                <input type="checkbox" name="Checkboxes2" style="margin-left: 30px;" />
+                                <span class="ssm-b">Import</span>
+                            </label>
+                            <label class="checkbox">
+                                <input type="checkbox" name="Checkboxes2" />
+                                <span class="ssm-b">Local</span>
+                            </label>
+                        </div>
+                        <div class="col-c" style="width: 22%;">
+                            <label class="checkbox">
+                                <input type="checkbox" name="Checkboxes2" style="margin-left: 15px;" />
+                                <span class="ssm-b">BOI</span>
+                            </label>
+                        </div>
+                        <div class="col-c"
+                            style="width: 22%;text-align: left;">
+                            <label class="checkbox">
+                                <input type="checkbox" name="Checkboxes2" style="margin-left: 15px;" />
+                                <span class="ssm-b">EEI</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="col-c " style="width: 40%;">
+                        <div class="col-c bl" style="width: 25%;">
+                        </div>
+                        <div class="col-c bl" style="width: 75%;">
+                        </div>
+                    </div>
+                    <div class="col-c bl" style="width: 60%;">
+                        <div class="col-c" style="width: 22%;">
+
+                        </div>
+                        <div class="col-c " style="width: 34%;">
+                            <label class="checkbox">
+                                <input type="checkbox" name="Checkboxes2" />
+                                <span class="ssm-b">AIR</span>
+                            </label>
+
+                        </div>
+                        <div class="col-c "
+                            style="width: 22%; text-align: left;">
+                            <label class="checkbox">
+                                <input type="checkbox" name="Checkboxes2" style="margin-left: 28px;" />
+                                <span class="ssm-b">SEA</span>
+                            </label>
+                        </div>
+                        <div class="col-c  "
+                            style="width: 22%; text-align: left;">
+                            <label class="checkbox">
+                                <input type="checkbox" name="Checkboxes2" style="margin-left: 15px;" />
+                                <span class="ssm-b">TRUCK</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- row5 -->
+                    <div class="col-c " style="width: 40%;">
+                        <div class="col-c bl" style="width: 40%; border-right: none; text-align: left;border-top: 1px solid black;">
+                            <p style="font-size: 9px; margin-top: 5px;margin-left: 2px;">UNDER RESPONSE BY</p>
+                        </div>
+                        <div class="col-c bl" style="width: 60%; border-left: none; border-right: none;border-top: 1px solid black; text-align: left;">
+                            <label class="checkbox">
+                                <input type="checkbox" name="Checkboxes2" />
+                                <span class="ssm-b">MSCST</span>
+                            </label>
+                            <label class="checkbox">
+                                <input type="checkbox" name="Checkboxes2" />
+                                <span class="ssm-b">VENDOR</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-c" style="width: 60%;">
+                        <div class="col-c bl" style="width: 22%; border-left: none; text-align: left; border-top: 1px solid black; border-right: 1px solid black;">
+                            <label class="checkbox">
+                                <input type="checkbox" name="Checkboxes2" style="margin: 0; margin-left: 5px;" />
+                                <span class="ssm-b">STT</span>
+                            </label>
+                            <label class="checkbox">
+                                <input type="checkbox" name="Checkboxes2" style="margin: 0; margin-left: 4px;"/>
+                                <span class="ssm-b">Other</span>
+                            </label>
+                        </div>
+                        <div class="col-c " style="width: 34%;border-top: 1px solid black; text-align: left; border-bottom: 1px solid black;">
+                            <p style="font-size: 10px; margin-top: 5px; margin-left:5px;">PACKING CONDITION</p>
+
+                        </div>
+                        <div class="col-c " style="width: 22%;border-top: 1px solid black; border-bottom: 1px solid black">
+                            <label class="checkbox">
+                                <input type="checkbox" name="Checkboxes2" style="margin-left: 46px;" />
+                                <span class="ssm-b">Good</span>
+                            </label>
+                        </div>
+                        <div class="col-c  "
+                            style="width: 22%; text-align: left; border-top: 1px solid black;border-bottom: 1px solid black">
+                            <label class="checkbox">
+                                <input type="checkbox" name="Checkboxes2" style="margin-left: 16px;" />
+                                <span class="ssm-b">No Good</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- row 6 7-->
+
+                    <div class="col-c " style="width: 100%;">
+                        <div class="col-c" style="width: 100%; text-align: left; border-top: 1px solid black;">
+                            <p class="sm-t" style="font-weight: bold; margin-top: 5px; margin-left: 5px;">Trouble Information :</p>
+                        </div>
+                    </div>
+                    <div class="col-c " style="width: 100%;">
+                        <div class="col-c bt_ bb_" style="width: 9%; text-align: left; border-bottom: dotted 1px;"></div>
+                        <div class="col-c bt_ bb_" style="width: 36%; text-align: left;"></div>
+                        <div class="col-c bt_  bb_" style="width: 55%; text-align: left; border-bottom: dotted 1px;"></div>
+                    </div>
+
+                    <!-- row 8 9 10 -->
+                    <div class="col-c " style="width: 40%;">
+                        <div class="col-c bb_"
+                            style="width: 100%; text-align: left; border-bottom: dotted 1px;">
+                            <p class="sm-t" style="font-size: 15px;">Type:</p>
+                        </div>
+                    </div>
+                    <div class="col-c " style="width: 60%;">
+                        <div class="col-c br_ bb_"
+                            style="width: 56%; text-align: left; border-bottom: dotted 1px;">
+                        </div>
+                        <div class="col-c bt_ bl_ br_" style="width: 22%; text-align: left; border-bottom: none;">
+                        </div>
+                        <div class="col-c bt_ bl_" style="width: 22%; text-align: left; border-bottom: none;">
+                        </div>
+                    </div>
+
+                    <div class="col-c " style="width: 40%;">
+                        <div class="col-c bb_"
+                            style="width: 100%; text-align: left;border-bottom: dotted 1px;">
+
+                        </div>
+                    </div>
+                    <div class="col-c " style="width: 60%;">
+                        <div class="col-c bb_ br_"
+                            style="width: 56%; text-align: left;border-bottom: dotted 1px;">
+                        </div>
+                        <div class="col-c br_ bl_"
+                            style="width: 22%; text-align: left; border-bottom: none; border-top: none;">
+                        </div>
+                        <div class="col-c bl_"
+                            style="width: 22%; text-align: left; border-bottom: none; border-top: none;">
+                        </div>
+                    </div>
+
+                    <div class="col-c " style="width: 65%;">
+                        <div class="col-c"
+                            style="width: 100%; border-right: none;">
+                            <p class="sm-t" style="font-size: 14px; margin-top: 2px;">( Unit price ............ bht = ............ = .................. bht. )</p>
+                        </div>
+                    </div>
+                    <div class="col-c " style="width: 35%;">
+                        <div class="col-c br_" style="width: 24.6%; text-align: left; border-left: none; ">
+                        </div>
+                        <div class="col-c br_ bl_"
+                            style="width: 37.7%; text-align: left; border-bottom: none; border-top: none;">
+                        </div>
+                        <div class="col-c bl_"
+                            style="width: 37.7%; text-align: left; border-bottom: none; border-top: none;">
+                        </div>
+                    </div>
+
+                    <!-- row 11 -->
+                    <div class="col-c " style="width: 40%;  height: 27px;">
+                        <div class="col-c bt_" style="width: 25%;  height: 27px;">
+                            <p class="ssm-f" style="font-size: 10px; margin-top: 5px;">ISSUE Q'TY :</p>
+                        </div>
+                        <div class="col-c bt_" style="width: 50%;  height: 27px;">
+                            <p class="ssm-f" style="font-size: 10px; margin-top: 5px;">Pcs, 1 Box =</p>
+                        </div>
+                        <div class="col-c bt_ br_"
+                            style="width: 25%;  height: 27px; text-align: end;">
+                            <p class="ssm-f" style="font-size: 10px; margin-top: 5px;  margin-right: 10px;">Pcs. </p>
+                        </div>
+                    </div>
+                    <div class="col-c " style="width: 60%;  height: 27px;">
+                        <div class="col-c  bt_" style="width: 22%;  height: 27px; text-align: left; border-right: none;">
+                            <p class="ssm-f" style="font-size: 10px; margin-top: 5px; margin-left: 2px;">PIC/WH</p>
+                        </div>
+                        <div class="col-c  bt_ br_" style="width: 34%;  height: 27px; border-left: none;">
+                        </div>
+                        <div class="col-c  bt_ bl_ br_" style="width: 22%;   height: 27px; border-bottom: 1px solid black;">
+                            <p class="sm-t mt-5">Issued/check</p>
+                        </div>
+                        <div class="col-c bt_ bl_ br_" style="width: 22%;   height: 27px; border-bottom: 1px solid black;">
+                            <p class="sm-t mt-5">Approved</p>
+                        </div>
+                    </div>
+
+                    <div class="col-c bt_" style="width: 100%; height: 15px;"></div>
+
+
+
+                </div>
+            </div>
         </div>
     </div>
     <div class="sec-3">
